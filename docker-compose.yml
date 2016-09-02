@@ -1,0 +1,40 @@
+version: '2'
+
+services:
+  redis:
+    restart: always
+    image: sprucefinance/redis:latest
+    command:
+    - --loglevel warning
+    networks:
+      - spruce-backend
+
+  postgresql:
+    restart: always
+    image: sprucefinance/postgresql:gitlab
+    environment:
+    - DB_USER=gitlab
+    - DB_PASS=password
+    - DB_NAME=gitlabhq_production
+    - DB_EXTENSION=pg_trgm
+    networks:
+      - spruce-backend
+
+  gitlab:
+    restart: always
+    image: sprucefinance/gitlab:8.11.3.1
+    depends_on:
+    - redis
+    - postgresql
+    ports:
+    - "80:80"
+    - "10022:22"
+    env_file: conf.env
+    networks:
+      - spruce-frontend
+
+networks:
+  spruce-frontend:
+    driver: bridge
+  spruce-backend:
+    driver: bridge
