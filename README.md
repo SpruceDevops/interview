@@ -7,7 +7,7 @@ Fix any problems that exist and get Gitlab online. You know this is working if a
 ### Deliverables
 Your public git repo url with working docker compose project and all dependencies. If you can't fix all the problems, share what you were able to get working. 
 
-### Contstraints
+### Constraints
 Must use the Sprucefinance public docker images 
 
 ### Hints
