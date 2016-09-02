@@ -15,6 +15,6 @@ Must use the Sprucefinance public docker images
 2. Required modifications should be relatively small
 
 ### Suggested First Steps
-1. If you don't already, download and install docker onto your computer
+1. If you don't already have it, download and install docker
 2. If you're unfamiliar with Docker, go through their "Getting Started" guide
 3. Fork this repo to start with your solution
