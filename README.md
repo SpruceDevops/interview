@@ -11,8 +11,8 @@ Your public git repo url with working docker compose project and all dependencie
 Must use the Sprucefinance public docker images 
 
 ### Hints
-There are no problems in the conf.env file
-Required modifications should be relatively small
+1. There are no problems in the conf.env file
+2. Required modifications should be relatively small
 
 ### Suggested First Steps
 1. If you don't already, download and install docker onto your computer
